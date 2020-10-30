@@ -37,6 +37,7 @@ btnEasy.addEventListener ('click',
       maxMessageEl.innerHTML = "inserisci un numero da "+ MIN_BOUND + " a " + MAX_BOUND + " : "
       btnLevel.className += "hidden";
       btnGame.className = " container";
+      
 })
 
 // level MEDIUM
@@ -61,57 +62,5 @@ btnHard.addEventListener ('click',
       btnGame.className -= "hidden";
 })
 
-// AVVIO
 
-btnStart.addEventListener ('click',
-   function () {
-
-
-    var mine = [];
-     // il computer genera 16 numeri da 1 a 100 attraverso un ciclo
-    while (mine.length < RANDOM_NUMBERS){
-       var mineGenerator =  Math.floor(Math.random()*(MAX_BOUND - MIN_BOUND)+ MIN_BOUND); //genera un numero da 1 a 100
-       if(!isInArray(mineGenerator, mine)){
-          mine.push(mineGenerator);
-         }
-    }
-
-    console.log(mine);
-    /*In seguito deve chiedere all'utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
-    */
-    var resultEl = document.getElementById("result");
-    var scoreEl = document.getElementById("click");
-    var hasWon = false;
-    var isAlive = true;
-    var user = [];
-
-
-    while (!hasWon && isAlive ){
-
-      var number = parseInt(prompt("inserisci un numero da "+ MIN_BOUND + " a " + MAX_BOUND)); // chiedi  un numero
-      //L'utente non può inserire più volte lo stesso numero.
-
-      if(isInArray(number, user)){
-        document.getElementById("result").innerHTML = "BOOM! E' esplosa una tua mina. Riprova senza digitare numeri che hai già inserito";
-        alert( "HAI PERSO !");
-      } else {
-        user.push(number);
-
-        if(isInArray(number, mine)){
-          isAlive = false;
-          resultEl.innerHTML = "BOOM! hai perso";
-        }
-        if(user.length === ROUNDS){
-          hasWon = true;
-          resultEl.innerHTML = "Hai Vinto!";
-        }
-      }
-
-
-      var score = parseInt(user.length);
-      scoreEl.innerHTML = score;
-      }
-
-
-
-})
+//START

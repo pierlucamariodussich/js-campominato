@@ -2,40 +2,162 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Campominato</title>
+    <title>CAMPOMINATO | Version 2.0</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/functions.js" charset="utf-8"></script>
+  <script src="js/functions.js" charset="utf-8"></script>
   </head>
   <body>
+
     <div class="layout">
-      <div  id="level" class="container ">
+      <!-- dimensione effettiva pagina e sfondo  -->
+      <div id="level" class="container_level  hidden">
         <div class="row">
           <div class="content ">
-            <h1> Seleziona Livello: </h1>
-            <button id="easy" type="button" name="button"> EASY</button>
-            <button id="medium" type="button" name="button"> MEDIUM</button>
-            <button id="hard" type="button" name="button"> HARD</button>
+           <img src="img/logo.png" alt="logo">
+           <button id="easy" type="button" name="button">EASY</button>
+           <button id="medium" type="button" name="button">MEDIUM</button>
+           <button id="hard" type="button" name="button">HARD</button>
           </div>
         </div>
       </div>
-      <div id="game" class="container hidden">
+
+      <div id="game" class="container_game ">
+        <div class="row">
+          <div id="game_logo" class="logo">
+           <img src="img/logo.png" alt="logo">
+          </div>
+          <div class="content">
+            <div id="easy_square" class="square easy" >
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+               <div class="slot"></div>
+
+            </div>
+            </div>
+            <div id="game_mes" class="message">
+              <h1 id=message_continua></h1>
+            </div>
+          </div>
+        </div>
+
+
+      <div id="win" class="container_win hidden">
         <div class="row">
           <div class="content">
-            <button id="start" type="button" name="button"> START</button>
-            <span id="max_message"></span><input class="hidden"  id="number" type="number" name="" value="" min="1" max="100">
-
-            <p id="result"> i</p>
-            <p id="click">i</p>
 
           </div>
-
         </div>
-
       </div>
+      <div id="loose" class="container_loose hidden">
+        <div class="row">
+          <div class="content">
+            <h1>BOOM !!! HAI PERSO</h1>
+
+          </div>
+        </div>
+      </div>
+
 
 
     </div>
 
-    <script src="js/script.js" charset="utf-8"></script>
+   <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
